@@ -1,0 +1,80 @@
+<!-- 
+------------------------------
+-------------[Start]----------
+---------[2024 - 2 - 08]------
+-----------[ 10:12 PM]--------
+------------------------------
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js" defer></script>
+  <title>مخزن الحاج اسامه واولاده</title>
+</head>
+<body>
+
+    <div class="crud">
+      <div class="head">
+        <button id="mode" onclick="toggleMode()"><img src="7030126_light_mobile_ui basic_lamp_dark mode_icon.png" ></button>
+          <div class="clock-container">
+            <div class="time"></div>
+            <div class="date"></div>
+        </div>
+        <h2> الحج اسامه واولاده</h2>
+        <p>نظام ادارة المخزن</p>
+      </div>
+      <!-- Start Inputs -->
+      <div class="inputs" id="remove-on-print">
+        <input type="text" id="title" placeholder="اسم المنتج">
+        <div class="price">
+          <input  type="number" id="price" placeholder="السعر">
+          <input type="number" id="count" placeholder="العدد">
+        </div>
+        <input type="text" id="category" placeholder="النوع">
+        <button id="submit">تخزين</button>
+      </div>
+      <!-- End Inputs -->
+      <!-- Start Outputs  -->
+      <div class="outputs"> 
+        <div class="searchBlock">
+          <input onkeyup="searchData(this.value)" type="text" id="search" placeholder="بحث">
+          <div class="btnSearch">
+            <button onclick="getSearchMode(this.id)" id="searchTitle">بحث عن طريق الاسم</button>
+            <button onclick="getSearchMode(this.id)" id="searchCategory">بحس عن طريق النوع</button>
+          </div>
+          <div id="deleteAll"></div>
+          <div class="table-container" id="print">
+          <table>
+            <tr>
+              <th>Id</th>
+              <th>اسم المنتج</th>
+              <th>السعر</th>
+              <th>النوع</th>
+              <th id ="uptateTh">تحديث</th>
+              <th id ="deleteTh">حذف</th>
+            </tr>
+            <tbody id="tbody">
+
+            </tbody>
+          </table>
+          </div>
+
+        </div>
+      </div>
+      <!-- End Outputs -->
+      <div class="print">طباعه</div>
+    </div>
+</body>
+</html>
+
+<!-- 
+------------------------------
+--------------[End]-----------
+---------[2024 - 1 - 00]------
+-----------[ 00:00 PM]--------
+------------------------------
+-->
