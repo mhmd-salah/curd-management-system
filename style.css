@@ -56,6 +56,11 @@ body {
   font-size: 30px;
   margin-bottom: 12px;
 }
+@media(max-width:767px){
+  .head p{
+    text-align: right;
+  }
+}
 .clock-container{
   position: absolute;
   top: 80px;
