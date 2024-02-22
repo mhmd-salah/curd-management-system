@@ -18,7 +18,6 @@ let trinprint;
 //-----------------------------------------------
 let mood = "create";
 let tmp;
-// get total
 // create product
 let dataProducts;
 if (localStorage.product != null) {
