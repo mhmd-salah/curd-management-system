@@ -48,7 +48,7 @@ submit.addEventListener("click", function () {
       }else{
       document.querySelector(".price input").style.flexBasis = "calc(98% / 2)"
       dataProducts[tmp]=newProduct
-      submit.innerHTML = "Create"
+      submit.innerHTML = "تخزين"
       count.style.display = "block"
       mood = "create"
     }
@@ -125,7 +125,7 @@ function deleteAll(){
 }
 
 function updateData(i){
-  submit.innerHTML = "Updata"
+  submit.innerHTML = "تحديث"
   title.value = dataProducts[i].title;
   price.value = dataProducts[ i ].price;
   count.value = dataProducts[i].count 
