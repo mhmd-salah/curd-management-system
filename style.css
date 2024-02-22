@@ -143,7 +143,11 @@ button:hover{
   width: 100%;
   overflow: auto;
 }
-
+@media(max-width:767px){
+  .table-container{
+    height: 300px;
+  }
+}
 .outputs table{
   /* min-width: 100%; */
   margin-top: 10px;
