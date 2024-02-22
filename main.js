@@ -38,9 +38,9 @@ submit.addEventListener("click", function () {
   if(title.value != "" && category.value != ""){
     if(mood == "create"){
       if(newProduct.count > 1){
-        for(let i =0;i < newProduct.count; i++){
+        // for(let i =0;i < newProduct.count; i++){
           dataProducts.push(newProduct);
-        }
+        // }
       }else{
           dataProducts.push(newProduct);
           
@@ -80,6 +80,7 @@ function showData() {
       <td class="td" id ="td">${dataProducts[i].title}</td>
       <td class="td" id ="td">${dataProducts[i].price}</td>
       <td class="td" id ="td">${dataProducts[i].category}</td>
+      <td class="td" id ="td">${dataProducts[i].count}</td>
       <td><button onclick="updateData(${i})" id="update">تحديث</button></td>
       <td><button onclick="deleteData(${i})" id="delete">حذف</button></td>
     </tr>
@@ -126,7 +127,8 @@ function deleteAll(){
 function updateData(i){
   submit.innerHTML = "Updata"
   title.value = dataProducts[i].title;
-  price.value = dataProducts[i].price;
+  price.value = dataProducts[ i ].price;
+  count.value = dataProducts[i].count 
   count.style.display ="none";
   category.value = dataProducts[i].category;
   mood = "update"
@@ -164,6 +166,7 @@ function searchData(value){
                     <td class="td" id ="td">${dataProducts[i].title}</td>
                     <td class="td" id ="td">${dataProducts[i].price}</td>
                     <td class="td" id ="td">${dataProducts[i].category}</td>
+                    <td class="td" id ="td">${dataProducts[i].count}</td>
                     <td><button onclick="updateData(${i})" id="update">تحديث</button></td>
                     <td><button onclick="deleteData(${i})" id="delete">حذف</button></td>
                   </tr>
